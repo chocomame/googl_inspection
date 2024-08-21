@@ -69,7 +69,7 @@ def process_urls(urls):
     return results
 
 st.title('全ページ検索 goo.gl 検品ツール')
-st.markdown('10件検索で3分くらい時間かかります。')
+st.markdown('無料サーバーを使用しているためメモリ容量オーバーで強制終了が頻発しています。  \n検索件数1～3件でご使用くださいませ。')
 urls = st.text_area('調査するウェブサイトのURLを1行に1つずつ入力してください:')
 
 if st.button('検索'):
