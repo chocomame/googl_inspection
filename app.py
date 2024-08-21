@@ -125,7 +125,30 @@ def process_urls(urls):
 # Streamlit UI
 st.set_page_config(page_title='全ページ検索 goo.gl 検品ツール', page_icon='🔍')
 st.title('全ページ検索 goo.gl 検品ツール')
-st.markdown('無料サーバーを使用しているためメモリ容量オーバーで強制終了が頻発しています。  \n検索件数1～3件でご使用くださいませ。')
+
+st.markdown("""
+<style>
+.small-font {
+    font-size:0.8em;
+}
+.big-font {
+    font-size:1em;
+}
+.mb40{
+    margin-bottom: 40px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<p class="big-font">
+無料サーバーを使用しているためメモリ容量オーバーで強制終了が頻発しています。<br>検索件数1～3件でご使用くださいませ。</p>
+<div class="small-font mb40">
+※ 目視で進捗が分かるように調整しました。<br>
+※ 少しだけ軽くするように調整しましたが、同時接続状況によっては再度強制終了になるかもしれないため、<br>　引き続き検索件数1～3件でお願いいたします。
+</div>
+""", unsafe_allow_html=True)
+
 urls = st.text_area('調査するウェブサイトのURLを1行に1つずつ入力してください:')
 
 if st.button('検索'):
